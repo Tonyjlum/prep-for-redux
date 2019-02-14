@@ -16,17 +16,6 @@ class App extends Component {
 }
 
 class Header extends Component {
-  render() {
-    return (
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to React</h1>
-      </header>
-    );
-  }
-}
-
-class Counter extends Component {
   state = { count: 0 };
 
   increment = () => {
@@ -45,11 +34,29 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className="Counter">
-        <h1>{this.state.count}</h1>
-        <button onClick={this.decrement}> - </button>
-        <button onClick={this.increment}> + </button>
-        <h3>{this.renderDescription()}</h3>
+      <div>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <div className="Counter">
+          <h1>{this.state.count}</h1>
+          <button onClick={this.decrement}> - </button>
+          <button onClick={this.increment}> + </button>
+          <h3>{this.renderDescription()}</h3>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Counter extends Component {
+
+
+  render() {
+    return (
+      <div >
+
       </div>
     );
   }
